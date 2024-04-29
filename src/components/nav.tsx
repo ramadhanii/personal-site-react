@@ -28,8 +28,8 @@ export default function Nav() {
 
                 <div className="flex flex-row py-6 p-2 md:p-6">
                     <DarkThemeToggle />
-                    <Link className="p-2" href="/reading">Reading</Link>
-                    <Link className="p-2" href="/projects">Projects</Link>
+                    {/* <Link className="p-2" href="/reading">Reading</Link>
+                    <Link className="p-2" href="/projects">Projects</Link> */}
                 </div>
             </MotionDiv>
         </div>
