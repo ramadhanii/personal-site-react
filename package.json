@@ -10,6 +10,7 @@
     "db:migrate": "node src/libs/data/migration.js"
   },
   "dependencies": {
+    "@next/third-parties": "^14.2.3",
     "framer-motion": "^11.1.7",
     "next": "14.2.3",
     "pnpm": "^9.0.6",
