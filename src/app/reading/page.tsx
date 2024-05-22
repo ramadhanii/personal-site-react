@@ -1,7 +1,6 @@
 'use client';
 import Link from "@/components/nav";
 import MotionDiv from "@/components/motion-div";
-
 export default function Page() {
     return (
         <main className="min-h-screen w-full p-2 md:p-4 lg:p-24 flex flex-col bg-[#f5f5f5] dark:bg-slate-950">

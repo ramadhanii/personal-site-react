@@ -7,7 +7,10 @@ import { GoogleAnalytics } from "@next/third-parties/google"
 const inter = Inter({ subsets: ["latin"] });
 
 export const metadata: Metadata = {
-  title: "Muhammad Ramadhani",
+  title: {
+    template: "%s | Muhammad Ramadhani",
+    default: "Muhammad Ramadhani",
+  },
   description: "Muhammad Ramadhani Personal Website",
 };
 
