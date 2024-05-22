@@ -25,9 +25,23 @@ const dayInString = [
     'Saturday'
 ]
 
+const monthsInString = [
+    'January',
+    'February',
+    'March',
+    'April',
+    'May',
+    'June',
+    'July',
+    'August',
+    'September',
+    'October',
+    'November',
+    'December'
+];
+
 function formatDate(date: Date): ClockProps {
     const dates = date.getDate();
-    const months = date.getMonth();
     let hours = date.getHours();
     let minutes = date.getMinutes();
     const seconds = date.getSeconds();
@@ -38,7 +52,6 @@ function formatDate(date: Date): ClockProps {
     const minute = minutes < 10 ? '0' + minutes : minutes;
     const second = seconds < 10 ? '0' + seconds : seconds;
     const theDate = dates < 10 ? '0' + dates : dates;
-    const month = months < 10 ? '0' + months : months;
     return {
         day: dayInString[date.getDay()],
         hour,
@@ -46,7 +59,7 @@ function formatDate(date: Date): ClockProps {
         ampm,
         second,
         date: theDate,
-        month,
+        month: monthsInString[date.getMonth()],
         year: date.getFullYear()
     }
 }
@@ -73,7 +86,7 @@ export default function Clock() {
                                 {date.hour}:{date.minute}:{date.second} {date.ampm}
                             </h1>
                             <h1 className="text-xl md:text-2xl lg:text-4xl xl:text-5xl md:pt-3 text-center text-black dark:text-gray-200">
-                                {date.day} &#x2022; {date.date}-{date.month}-{date.year}
+                                {date.day} &#x2022; {date.month} {date.date}, {date.year}
                             </h1>
                         </div>
                         :
